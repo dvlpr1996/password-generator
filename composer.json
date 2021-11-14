@@ -1,0 +1,11 @@
+{
+    "name": "dvlpr1996/password-generator",
+    "description": "generate password in different method",
+    "authors": [
+        {
+            "name": "dvlpr1996",
+            "email": "nimajahanbakhshian@gmail.com"
+        }
+    ],
+    "require": {}
+}
