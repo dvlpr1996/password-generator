@@ -1,0 +1,53 @@
+:root {
+	--bg-color: #22252e;
+	--btn-color: #1ED89D;
+	--btn-color-hover: #17b683;
+	--text-color: #fff;
+}
+
+body {
+	background-color: var(--bg-color);
+	color: var(--text-color); 
+}
+
+a {
+	text-decoration: none;
+}
+
+nav span {
+	vertical-align: sub;
+}
+
+label,
+button {
+	text-transform: capitalize;
+}
+
+.btn {
+	background-color: var(--btn-color);
+	color: var(--text-color);
+	border-radius: 5px;
+}
+
+.btn:hover {
+	background-color: var(--btn-color-hover);
+	color: var(--text-color);
+}
+
+.form-check-input:checked {
+	background-color: var(--btn-color);
+	border-color: var(--btn-color);
+}
+
+.form-select {
+	background-color: #e9ecef;
+}
+
+.form-select:hover {
+	cursor: pointer;
+}
+
+.form-select:focus,
+.form-control:focus {
+	box-shadow: 0 0 0 0.25rem rgb(53, 169, 132);
+}
