@@ -1,11 +1,17 @@
 {
-    "name": "dvlpr1996/password-generator",
-    "description": "generate password in different method",
-    "authors": [
-        {
-            "name": "dvlpr1996",
-            "email": "nimajahanbakhshian@gmail.com"
-        }
-    ],
-    "require": {}
+	"name": "dvlpr1996/password-generator",
+	"description": "generate password in different method",
+	"type": "project",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "dvlpr1996",
+			"email": "nimajahanbakhshian@gmail.com"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"src\\": "src/"
+		}
+	}
 }
