@@ -27,8 +27,4 @@ class Generator
 			return substr($shuffle, 0, $lengh);
 		}
 	}
-
-	public function show() {
-		return "show";
-	}
 }

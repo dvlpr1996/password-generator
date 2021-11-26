@@ -86,7 +86,7 @@
 
 	</div>
 
-
+	
 	<?= include_layout("tpl/layout/footer.php") ?>
 </body>
 

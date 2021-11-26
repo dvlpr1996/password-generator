@@ -1,5 +1,5 @@
 <?php
-defined('BASE_PATH') or die("Permision Denied!");
+// defined('BASE_PATH') or die("Permision Denied!");
 
 function nice_dd($data)
 {
@@ -10,9 +10,8 @@ function nice_dd($data)
 
 function dd($data)
 {
-	echo "<pre>";
-	print_r($data);
-	echo "</pre>";
+	nice_dd($data);
+	die();
 }
 
 function current_time()
@@ -45,4 +44,12 @@ function page_title(): string
 function include_layout(string $url = '')
 {
 	include_once(BASE_PATH . $url);
+}
+
+function validation($data)
+{
+	$data = filter_var($data, FILTER_SANITIZE_STRING);
+	$data = trim($data);
+	$data = htmlspecialchars($data);
+	return $data;
 }
