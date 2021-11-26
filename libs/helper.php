@@ -1,5 +1,5 @@
 <?php
-// defined('BASE_PATH') or die("Permision Denied!");
+defined('BASE_PATH') or die("Permision Denied!");
 
 function nice_dd($data)
 {
