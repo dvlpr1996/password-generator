@@ -1,14 +1,13 @@
 <?php
+namespace src;
 
-namespace src\generator;
+defined('BASE_PATH') OR die("Permision Denied!");
 
-class generator
+class Generator
 {
 	private $char = "rowbxqlumphgidyfaenktvsjcz";
 	private $symbols = "#@!()&^%$~/]*[{}?><;";
 	private $numbers = "6203457189";
-
-
 
 	public function passgenerator(array $data, int $lengh = 6): string
 	{
@@ -27,5 +26,9 @@ class generator
 			$shuffle = str_pad($shuffle, 124, $shuffle, STR_PAD_BOTH);
 			return substr($shuffle, 0, $lengh);
 		}
+	}
+
+	public function show() {
+		return "show";
 	}
 }
