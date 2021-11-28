@@ -8,7 +8,7 @@
 	<meta charset="UTF-8">
 	<meta name="designer" content="Nima jahan bakhshian">
 	<meta name="language" content="en">
-	<meta name="description" content="Password Generator help's you to generate password">
+	<meta name="description" content="Password Generator help's you to generate password and hashing your data">
 	<meta name="subject" content="Password Generator">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,7 +24,7 @@
 	<div class="container-fluid">
 
 		<nav class="mt-1">
-			<a href="index.html">
+			<a href="<?= site_url("index.php") ?>">
 				<img src="<?= BASE_URL ?>assets/img/logo.png" alt="logo" width="70" height="70">
 			</a>
 			<a href="<?= site_url("index.php") ?>">Password Generator</a>

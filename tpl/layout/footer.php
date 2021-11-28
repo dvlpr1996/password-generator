@@ -11,8 +11,6 @@
 	</footer>
 </div>
 
-
-<script src="<?= BASE_URL ?>assets/vendor/jquery/jquery.min.js"></script>
 <script src="<?= BASE_URL ?>assets/vendor/jquery/jquery.min.js"></script>
 <script src="<?= BASE_URL ?>assets/vendor/clipboard/clipboard.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

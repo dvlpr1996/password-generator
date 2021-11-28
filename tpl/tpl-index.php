@@ -38,7 +38,7 @@
 				</div>
 
 			</div>
-			<!-- todo : form input validation sanitize and filter func -->
+			
 			<div class="col-md-6 col-lg-4 mt-3 mt-lg-2">
 				<select class="form-select" name="length">
 					<option>Password Length</option>
