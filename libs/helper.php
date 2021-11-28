@@ -34,11 +34,10 @@ function page_title(): string
 {
 	$title = $_SERVER['SCRIPT_FILENAME'];
 	$title = basename($title, '.php');
-	$title = str_replace("-", " ", $title);
 	if ($title == 'index') {
-		$title = ucwords(SITE_TITLE . "- home");
+		return ucwords("Password generator");
 	}
-	return ucwords(SITE_TITLE . $title);
+	return ucwords($title .  " " . "generator");
 }
 
 function include_layout(string $url = '')
