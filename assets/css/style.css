@@ -12,10 +12,13 @@ body {
 
 a {
 	text-decoration: none;
+	color: var(--text-color);
+	margin-left: 5px;
+	vertical-align: -webkit-baseline-middle;
 }
 
-nav span {
-	vertical-align: sub;
+a:hover {
+	color: var(--text-color);
 }
 
 label,
@@ -50,4 +53,12 @@ button {
 .form-select:focus,
 .form-control:focus {
 	box-shadow: 0 0 0 0.25rem rgb(53, 169, 132);
+}
+
+.hash-control {
+	height: 50px;
+}
+
+.form-control[value] {
+	text-align: center;
 }
