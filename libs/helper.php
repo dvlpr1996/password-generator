@@ -35,7 +35,7 @@ function page_title(): string
 	$title = $_SERVER['SCRIPT_FILENAME'];
 	$title = basename($title, '.php');
 	if ($title == 'index') {
-		return ucwords("Password generator");
+		return ucwords(SITE_TITLE);
 	}
 	return ucwords($title .  " " . "generator");
 }
