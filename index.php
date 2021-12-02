@@ -1,5 +1,5 @@
 <?php include "bootstrap/init.php" ?>
-<?php include_layout("tpl/layout/header.php") ?>
+<?php include_once "tpl/layout/header.php" ?>
 
 <div class="text-center mt-3">
 	<h1>Password Generator</h1>
@@ -7,24 +7,26 @@
 </div>
 
 <div class="container mt-5">
-
 	<div class="row">
 		<div class="col-md-8 col-lg-6 mx-auto">
-			<input type="text" class="form-control" id="copy" data-action="pass" value="your generated password" readonly>
+			<input type="text" class="form-control" id="copy" data-action="pass"
+			 value="<?= $pass ?? 'your generated password' ?>" readonly>
 		</div>
 	</div>
+
+
 
 	<form action="<?= site_url('process/action.php?action=pass') ?>" method="POST" class="row justify-content-evenly align-items-center mt-3">
 
 		<div class="col-auto mt-3 mt-lg-2">
 
 			<div class="form-check form-check-inline">
-				<input class="form-check-input" id="upper" name="upper" type="checkbox" value="uppercase">
+				<input class="form-check-input" id="upper" name="upper" type="checkbox" value="upper">
 				<label class="form-check-label" for="upper">uppercase</label>
 			</div>
 
 			<div class="form-check form-check-inline">
-				<input class="form-check-input" id="lower" name="lower" type="checkbox" value="lowercase">
+				<input class="form-check-input" id="lower" name="lower" type="checkbox" value="lower">
 				<label class="form-check-label" for="lower">lowercase</label>
 			</div>
 
@@ -87,8 +89,7 @@
 
 </div>
 
-
-<?php include_layout("tpl/layout/footer.php") ?>
+<?php include_once "tpl/layout/footer.php" ?>
 </body>
 
 </html>

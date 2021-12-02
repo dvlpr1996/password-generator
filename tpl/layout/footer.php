@@ -1,14 +1,11 @@
-<?php defined('BASE_PATH') or die("Permision Denied!"); ?>
-
-<div class="container-fluid">
-	<footer>
-		<div class="text-center">
-			<hr>
+<div class="container-fluid footer-wrapper">
+	<div class="row navbar fixed-bottom text-center">
+		<footer>
 			<p>
 				all right reserved by nima jahan bakhshian &copy; <?= current_time() ?>
 			</p>
-		</div>
-	</footer>
+		</footer>
+	</div>
 </div>
 
 <script src="<?= BASE_URL ?>assets/vendor/jquery/jquery.min.js"></script>

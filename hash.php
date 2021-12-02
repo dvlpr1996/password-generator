@@ -1,5 +1,5 @@
 <?php include "bootstrap/init.php" ?>
-<?php include_layout("tpl/layout/header.php") ?>
+<?php include_once "tpl/layout/header.php" ?>
 
 <div class="container">
 
@@ -10,11 +10,12 @@
 
 	<div class="row">
 		<div class="col-md-8 col-lg-6 mx-auto">
-			<input type="text" class="form-control hash-control" id="copy" data-action="hash" value="your generated hash" readonly>
+			<input type="text" class="form-control hash-control" id="copy" data-action="hash"
+			 value="<?= $hash ?? 'your generated hash' ?>" readonly>
 		</div>
 	</div>
 
-	<form action="<?= site_url("hash.php") ?>" method="POST" class="text-center mt-4">
+	<form action="<?= site_url("process/action.php?action=hash") ?>" method="POST" class="text-center mt-4">
 
 		<div class="form-check form-check-inline mt-2">
 			<input type="radio" class="form-check-input" name="radiodata" id="sha1" value="sha1">
@@ -66,12 +67,16 @@
 			<label class="form-check-label" for="ripemd256">ripemd256</label>
 		</div>
 
+		<div class="mt-3 col-md-8 col-lg-6 mx-auto">
+			<input type="text" class="form-control input-control" name="user-input" placeholder="Enter your text ...">
+		</div>
+
 		<div class="text-center mt-4">
 			<button type="button" class="btn btn-copy m-3" data-clipboard-action="copy" data-clipboard-target="#copy">copy to clipboard</button>
-			<button type="submit" class="btn" name="generate">generate hash</button>
+			<button type="submit" class="btn" name="generate" value="generate hash">generate hash</button>
 		</div>
 
 	</form>
 
 </div>
-<?php include_layout("tpl/layout/footer.php") ?>
+<?php include_once "tpl/layout/footer.php" ?>
