@@ -5,7 +5,7 @@
 ## PHP Password Generator
 
 <div align="center">
-	<img src="https://user-images.githubusercontent.com/93678876/150367001-301328e6-f01c-420c-94c4-5eefb4f5ddba.png" height="500px" alt="PHP-Password-Generator">
+	<img src="https://user-images.githubusercontent.com/93678876/150367001-301328e6-f01c-420c-94c4-5eefb4f5ddba.png" height="500px" alt="dvlpr1996 PHP-Password-Generator" title="PHP-Password-Generator">
 </div>
 <br>
 <p>
@@ -17,7 +17,7 @@
 ## PHP Hashing String
 
 <div align="center">
-	<img src="https://user-images.githubusercontent.com/93678876/150367129-bdf48623-8cdf-426a-b44e-0b94ac41c37e.png" height="500px" alt="PHP-Hashing-String">
+	<img src="https://user-images.githubusercontent.com/93678876/150367129-bdf48623-8cdf-426a-b44e-0b94ac41c37e.png" height="500px" alt="dvlpr1996 PHP-Hashing-generator" title="PHP-Hashing-generator">
 </div>
 <br>
 <p>
