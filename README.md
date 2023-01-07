@@ -38,3 +38,15 @@
 
 ![Git](https://img.shields.io/badge/-Git-F05032?style=for-the-badge&logo=Git&logoColor=fff)
 ![VS Code](https://img.shields.io/badge/-VS%20Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=fff)
+
+## issues
+
+If you discover any issues, please using the issue tracker.
+
+## Credits
+
+-   [Nima jahan bakhshian](https://github.com/dvlpr1996)
+
+## License
+
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
