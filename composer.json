@@ -12,7 +12,8 @@
 	"autoload": {
 		"psr-4": {
 			"src\\": "src/"
-		}
+		},
+        "files": ["./libs/helper.php"]
 	},
 	"require": {
 		"vlucas/phpdotenv": "^5.4"
