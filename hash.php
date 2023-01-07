@@ -1,4 +1,3 @@
-<?php include "bootstrap/init.php" ?>
 <?php include_once "tpl/layout/header.php" ?>
 
 <div class="container">
@@ -15,7 +14,7 @@
 		</div>
 	</div>
 
-	<form action="<?= site_url("process/action.php?action=hash") ?>" method="POST" class="text-center mt-4">
+	<form action="<?= action('hash') ?>" method="POST" class="text-center mt-4">
 
 		<div class="form-check form-check-inline mt-2">
 			<input type="radio" class="form-check-input" name="radiodata" id="sha1" value="sha1">

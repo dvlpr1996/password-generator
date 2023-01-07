@@ -1,4 +1,3 @@
-#generate password and hashing 
 # PHP Password Generator And Hashing String
 
 <br>

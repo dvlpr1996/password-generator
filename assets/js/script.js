@@ -27,7 +27,7 @@ clipboard.on('success', function (e) {
 		confirmButtonText: 'ok'
 	}).then((result) => {
 		if (result.isConfirmed) {
-			window.location = "http://localhost/dev/password-generator/" + path + ".php";
+			window.location = "http://localhost/dev/git/password-generator/" + path + ".php";
 		}
 	})
 });
