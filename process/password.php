@@ -1,5 +1,4 @@
 <?php
-
 require_once __DIR__ . "/../bootstrap/init.php";
 
 use src\view;
@@ -16,12 +15,17 @@ $symbolRequest = $_POST['symbols'] ?? null;
 $numbersRequest = $_POST['numbers'] ?? null;
 $request = strtoupper($_SERVER['REQUEST_METHOD']);
 
-try {
-    if ($request !== 'POST')
-        die_Page('invalid request!');
+$_SESSION = null;
+$msg = null;
 
-    if (!isset($btnGenerate) && $btnGenerate != 'generate Password')
+try {
+    if ($request !== 'POST') {
         throw new Exception('Invalid request');
+    }
+
+    if (!isset($btnGenerate) && $btnGenerate != 'generate Password') {
+        throw new Exception('Invalid request');
+    }
 
     (isset($upperRequest) && $upperRequest == 'upper') ? $upper = $upperRequest : $upper = null;
 
@@ -48,6 +52,8 @@ try {
 
     $pass = e((new Generator())->passgenerator($data, $len));
     view::render('index', ['pass' => $pass]);
+
 } catch (exception $e) {
-    display_error($e->getMessage());
+    $_SESSION["msg"] = $e->getMessage();
+    header("Location: ../index.php");
 }

@@ -12,6 +12,17 @@
         </div>
     </div>
 
+    <?php if (isset($_SESSION["msg"]) && !empty($_SESSION["msg"])) : ?>
+        <div class="row justify-content-center mt-4">
+            <div class="col-6">
+                <div class="alert alert-danger">
+                    <?= $_SESSION["msg"] ?>
+                </div>
+            </div>
+        </div>
+        <?php unset($_SESSION["msg"]) ?>
+    <?php endif ?>
+
     <form action="<?= action('password') ?>" method="POST" class="row justify-content-evenly align-items-center mt-3">
 
         <div class="col-auto mt-3 mt-lg-2">

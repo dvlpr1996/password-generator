@@ -1,5 +1,4 @@
 <?php
-
 require_once __DIR__ . "/../bootstrap/init.php";
 
 use src\view;
@@ -22,31 +21,41 @@ $algos = [
 $btnGenerate = $_POST['generate'];
 $request = strtoupper($_SERVER['REQUEST_METHOD']);
 
+$_SESSION = null;
+$msg = null;
 
 try {
-    if ($request !== 'POST')
-        die_Page('invalid request!');
-
-    if (!isset($btnGenerate) && $btnGenerate != 'generate hash')
+    if ($request !== 'POST') {
         throw new Exception('Invalid request');
+    }
 
-    (isset($_POST['user-input']) && !empty($_POST['user-input'])) ? $input = input_validation($_POST['user-input']) : $input = null;
+    if (!isset($btnGenerate) && $btnGenerate != 'generate hash') {
+        throw new Exception('Invalid request');
+    }
 
-    (isset($_POST['radiodata'])) ? $radiodata = $_POST['radiodata'] : $radiodata = null;
+    (isset($_POST['user-input']) && !empty($_POST['user-input']))
+        ? $input = input_validation($_POST['user-input'])
+        : $input = null;
 
-    if (!isset($_POST['radiodata']))
+    $radiodata = $_POST['radiodata'] ?? null;
+
+    if (!isset($_POST['radiodata'])) {
         throw new Exception('one item must be selected');
+    }
 
-    if (empty($input))
+    if (empty($input)) {
         throw new Exception('Enter your text');
+    }
 
-    if (!in_array($radiodata, $algos, true))
+    if (!in_array($radiodata, $algos, true)) {
         throw new Exception('hash algorithm is not valid! try again');
+    }
 
-    $hash = e((new hash)->generateHash($input, $radiodata));
+    $hash = (new hash)->generateHash($input, $radiodata);
 
     view::render('hash', ['hash' => $hash]);
 
 } catch (exception $e) {
-    display_error($e->getMessage());
+    $_SESSION["msg"] = $e->getMessage();
+    header("Location: ../hash.php");
 }
